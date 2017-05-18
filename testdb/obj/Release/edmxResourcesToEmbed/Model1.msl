@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stocksqlModelStoreContainer" CdmEntityContainer="stocksqlEntities">
+    <EntitySetMapping Name="bctc">
+      <EntityTypeMapping TypeName="stocksqlModel.bctc">
+        <MappingFragment StoreEntitySet="bctc">
+          <ScalarProperty Name="mack" ColumnName="mack" />
+          <ScalarProperty Name="doanhthuthuan" ColumnName="doanhthuthuan" />
+          <ScalarProperty Name="giavon" ColumnName="giavon" />
+          <ScalarProperty Name="phiquanly" ColumnName="phiquanly" />
+          <ScalarProperty Name="loinhuantruocthue" ColumnName="loinhuantruocthue" />
+          <ScalarProperty Name="loinhuansauthue" ColumnName="loinhuansauthue" />
+          <ScalarProperty Name="loinhuankhac" ColumnName="loinhuankhac" />
+          <ScalarProperty Name="quy" ColumnName="quy" />
+          <ScalarProperty Name="nam" ColumnName="nam" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="congty">
+      <EntityTypeMapping TypeName="stocksqlModel.congty">
+        <MappingFragment StoreEntitySet="congty">
+          <ScalarProperty Name="mack" ColumnName="mack" />
+          <ScalarProperty Name="tencty" ColumnName="tencty" />
+          <ScalarProperty Name="nhomnganh" ColumnName="nhomnganh" />
+          <ScalarProperty Name="socp" ColumnName="socp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="stocksqlModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bctc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="mack" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="doanhthuthuan" Type="int" Nullable="false" />
+    <Property Name="giavon" Type="int" Nullable="false" />
+    <Property Name="phiquanly" Type="int" Nullable="false" />
+    <Property Name="loinhuantruocthue" Type="int" Nullable="false" />
+    <Property Name="loinhuansauthue" Type="int" Nullable="false" />
+    <Property Name="loinhuankhac" Type="int" Nullable="false" />
+    <Property Name="quy" Type="int" Nullable="false" />
+    <Property Name="nam" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="congty">
+    <Key>
+      <PropertyRef Name="mack" />
+    </Key>
+    <Property Name="mack" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tencty" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="nhomnganh" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="socp" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="stocksqlModelStoreContainer">
+    <EntitySet Name="bctc" EntityType="Self.bctc" Schema="stocksql" store:Type="Tables" />
+    <EntitySet Name="congty" EntityType="Self.congty" Schema="stocksql" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

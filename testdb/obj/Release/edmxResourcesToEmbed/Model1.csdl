@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="stocksqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bctc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="mack" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="doanhthuthuan" Type="Int32" Nullable="false" />
+    <Property Name="giavon" Type="Int32" Nullable="false" />
+    <Property Name="phiquanly" Type="Int32" Nullable="false" />
+    <Property Name="loinhuantruocthue" Type="Int32" Nullable="false" />
+    <Property Name="loinhuansauthue" Type="Int32" Nullable="false" />
+    <Property Name="loinhuankhac" Type="Int32" Nullable="false" />
+    <Property Name="quy" Type="Int32" Nullable="false" />
+    <Property Name="nam" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="congty">
+    <Key>
+      <PropertyRef Name="mack" />
+    </Key>
+    <Property Name="mack" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tencty" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nhomnganh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="socp" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="stocksqlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bctc" EntityType="Self.bctc" />
+    <EntitySet Name="congty" EntityType="Self.congty" />
+  </EntityContainer>
+</Schema>

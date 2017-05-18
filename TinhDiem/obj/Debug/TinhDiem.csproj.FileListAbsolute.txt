@@ -1,0 +1,15 @@
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\bin\Debug\TinhDiem.exe.config
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\bin\Debug\TinhDiem.exe
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\bin\Debug\TinhDiem.pdb
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.csprojResolveAssemblyReference.cache
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\MainWindow.g.cs
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\App.g.cs
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem_MarkupCompile.cache
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem_MarkupCompile.lref
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\MainWindow.baml
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.g.resources
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.Properties.Resources.resources
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.csproj.GenerateResource.Cache
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.exe
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\obj\Debug\TinhDiem.pdb
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\TinhDiem\bin\Debug\HtmlAgilityPack.dll

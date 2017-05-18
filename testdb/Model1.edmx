@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="stocksqlModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bctc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="mack" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="doanhthuthuan" Type="int" Nullable="false" />
+          <Property Name="giavon" Type="int" Nullable="false" />
+          <Property Name="phiquanly" Type="int" Nullable="false" />
+          <Property Name="loinhuantruocthue" Type="int" Nullable="false" />
+          <Property Name="loinhuansauthue" Type="int" Nullable="false" />
+          <Property Name="loinhuankhac" Type="int" Nullable="false" />
+          <Property Name="quy" Type="int" Nullable="false" />
+          <Property Name="nam" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="congty">
+          <Key>
+            <PropertyRef Name="mack" />
+          </Key>
+          <Property Name="mack" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tencty" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="nhomnganh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="socp" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="stocksqlModelStoreContainer">
+          <EntitySet Name="bctc" EntityType="Self.bctc" Schema="stocksql" store:Type="Tables" />
+          <EntitySet Name="congty" EntityType="Self.congty" Schema="stocksql" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="stocksqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bctc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="mack" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="doanhthuthuan" Type="Int32" Nullable="false" />
+          <Property Name="giavon" Type="Int32" Nullable="false" />
+          <Property Name="phiquanly" Type="Int32" Nullable="false" />
+          <Property Name="loinhuantruocthue" Type="Int32" Nullable="false" />
+          <Property Name="loinhuansauthue" Type="Int32" Nullable="false" />
+          <Property Name="loinhuankhac" Type="Int32" Nullable="false" />
+          <Property Name="quy" Type="Int32" Nullable="false" />
+          <Property Name="nam" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="congty">
+          <Key>
+            <PropertyRef Name="mack" />
+          </Key>
+          <Property Name="mack" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tencty" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nhomnganh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="socp" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="stocksqlEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bctc" EntityType="Self.bctc" />
+          <EntitySet Name="congty" EntityType="Self.congty" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="stocksqlModelStoreContainer" CdmEntityContainer="stocksqlEntities">
+          <EntitySetMapping Name="bctc">
+            <EntityTypeMapping TypeName="stocksqlModel.bctc">
+              <MappingFragment StoreEntitySet="bctc">
+                <ScalarProperty Name="mack" ColumnName="mack" />
+                <ScalarProperty Name="doanhthuthuan" ColumnName="doanhthuthuan" />
+                <ScalarProperty Name="giavon" ColumnName="giavon" />
+                <ScalarProperty Name="phiquanly" ColumnName="phiquanly" />
+                <ScalarProperty Name="loinhuantruocthue" ColumnName="loinhuantruocthue" />
+                <ScalarProperty Name="loinhuansauthue" ColumnName="loinhuansauthue" />
+                <ScalarProperty Name="loinhuankhac" ColumnName="loinhuankhac" />
+                <ScalarProperty Name="quy" ColumnName="quy" />
+                <ScalarProperty Name="nam" ColumnName="nam" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="congty">
+            <EntityTypeMapping TypeName="stocksqlModel.congty">
+              <MappingFragment StoreEntitySet="congty">
+                <ScalarProperty Name="mack" ColumnName="mack" />
+                <ScalarProperty Name="tencty" ColumnName="tencty" />
+                <ScalarProperty Name="nhomnganh" ColumnName="nhomnganh" />
+                <ScalarProperty Name="socp" ColumnName="socp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

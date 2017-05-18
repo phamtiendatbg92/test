@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="testdb.View.DbOperView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:testdb.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="MistyRose"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/> <!--Blank space-->
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" 
+               Content="Create" FontSize="20" FontWeight="Bold" 
+               VerticalContentAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Mã chứng khoán" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Tên công ty" Grid.Row="0" Grid.Column="1"/>
+            <Label Content="Nhóm ngành" Grid.Row="0" Grid.Column="2"/>
+            <Label Content="Số lượng cổ phiếu" Grid.Row="0" Grid.Column="3"/>
+            <TextBox x:Name="tbCrMack" Grid.Row="1" Grid.Column="0"/>
+            <TextBox x:Name="tbCrTenCty" Grid.Row="1" Grid.Column="1"/>
+            <ComboBox x:Name="cbCrNhomNganh" Grid.Row="1" Grid.Column="2">
+                <ComboBoxItem Content="Vật liệu xây dựng" />
+                <ComboBoxItem Content="Thép" />
+                <ComboBoxItem Content="Xây dựng" />
+            </ComboBox>
+            <TextBox x:Name="tbCrSoLuongCp" Grid.Row="1" Grid.Column="3"/>
+            <Button Content="Create" Grid.Row="0" Grid.Column="4" Grid.RowSpan="2"
+                    Click="CreateCongTy_Button_Click"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Quý" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Năm" Grid.Row="0" Grid.Column="1"/>
+            <Label Content="Mã chứng khoán" Grid.Row="0" Grid.Column="2"/>
+            <Label Content="Doanh thu thuần" Grid.Row="0" Grid.Column="3"/>
+            <Label Content="Giá vốn" Grid.Row="0" Grid.Column="4"/>
+            <Label Content="Phí quản lý DN" Grid.Row="0" Grid.Column="5"/>
+            <Label Content="LN trước thuế" Grid.Row="0" Grid.Column="6"/>
+            <Label Content="LN sau thuế" Grid.Row="0" Grid.Column="7"/>
+            <Label Content="LN khác" Grid.Row="0" Grid.Column="8"/>
+            <TextBox x:Name="crQuy" Grid.Row="1" Grid.Column="0"/>
+            <TextBox x:Name="crNam" Grid.Row="1" Grid.Column="1"/>
+            <TextBox x:Name="crMaCk" Grid.Row="1" Grid.Column="2"/>
+            <TextBox x:Name="crDoanhThuThuan" Grid.Row="1" Grid.Column="3"/>
+            <TextBox x:Name="crGiaVon" Grid.Row="1" Grid.Column="4"/>
+            <TextBox x:Name="crPhiQuanLyDN" Grid.Row="1" Grid.Column="5"/>
+            <TextBox x:Name="crLNTruocThue" Grid.Row="1" Grid.Column="6"/>
+            <TextBox x:Name="crLNSauThue" Grid.Row="1" Grid.Column="7"/>
+            <TextBox x:Name="crLNKhac" Grid.Row="1" Grid.Column="8"/>
+            <Button Content="Create" Grid.Row="0" Grid.Column="9" Grid.RowSpan="2"
+                    Click="CreateBctc_Button_Click"/>
+        </Grid>
+        <Label Grid.Row="3" 
+               Content="Update" FontSize="20" FontWeight="Bold" 
+               VerticalContentAlignment="Center"/>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Mã chứng khoán" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Tên công ty" Grid.Row="0" Grid.Column="1"/>
+            <Label Content="Nhóm ngành" Grid.Row="0" Grid.Column="2"/>
+            <Label Content="Số lượng cổ phiếu" Grid.Row="0" Grid.Column="3"/>
+            <TextBox Grid.Row="1" x:Name="tbUdMack" TextChanged="Congty_Mack_TextChanged" Grid.Column="0"/>
+            <TextBox Grid.Row="1" x:Name="tbUdTenCty" Grid.Column="1"/>
+            <ComboBox Grid.Row="1" x:Name="cbUdNhomNganh" Grid.Column="2">
+                <ComboBoxItem Content="Vật liệu xây dựng" />
+                <ComboBoxItem Content="Thép" />
+                <ComboBoxItem Content="Xây dựng" />
+            </ComboBox>
+            <TextBox Grid.Row="1" x:Name="tbUdSoluongCP" Grid.Column="3"/>
+            <Button Content="Update" Grid.Row="0" Grid.Column="4" Grid.RowSpan="2"
+                    Click="UpdateCongTy_Click"/>
+        </Grid>
+        <Grid Grid.Row="5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="bctcId" Visibility="Hidden"/>
+            <Label Content="Quý" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Năm" Grid.Row="0" Grid.Column="1"/>
+            <Label Content="Mã chứng khoán" Grid.Row="0" Grid.Column="2"/>
+            <Label Content="Doanh thu thuần" Grid.Row="0" Grid.Column="3"/>
+            <Label Content="Giá vốn" Grid.Row="0" Grid.Column="4"/>
+            <Label Content="Phí quản lý DN" Grid.Row="0" Grid.Column="5"/>
+            <Label Content="LN trước thuế" Grid.Row="0" Grid.Column="6"/>
+            <Label Content="LN sau thuế" Grid.Row="0" Grid.Column="7"/>
+            <Label Content="LN khác" Grid.Row="0" Grid.Column="8"/>
+            <ComboBox x:Name="udQuyCb" SelectionChanged="udQuyCb_SelectionChanged" Grid.Row="1" Grid.Column="0"/>
+            <ComboBox x:Name="udNamCb" SelectionChanged="udQuyCb_SelectionChanged" Grid.Row="1" Grid.Column="1"/>
+            <TextBox x:Name="udMaCk" Grid.Row="1" Grid.Column="2" TextChanged="udMaCk_TextChanged"/>
+            <TextBox x:Name="udDoanhThuThuan" Grid.Row="1" Grid.Column="3"/>
+            <TextBox x:Name="udGiaVon" Grid.Row="1" Grid.Column="4"/>
+            <TextBox x:Name="udPhiQuanLyDN" Grid.Row="1" Grid.Column="5"/>
+            <TextBox x:Name="udLNTruocThue" Grid.Row="1" Grid.Column="6"/>
+            <TextBox x:Name="udLNSauThue" Grid.Row="1" Grid.Column="7"/>
+            <TextBox x:Name="udLNKhac" Grid.Row="1" Grid.Column="8"/>
+            <Button Content="Update" Grid.Row="0" Grid.Column="9" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+</UserControl>

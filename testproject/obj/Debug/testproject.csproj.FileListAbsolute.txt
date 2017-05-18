@@ -1,0 +1,13 @@
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\bin\Debug\testproject.exe.config
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\bin\Debug\testproject.exe
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\bin\Debug\testproject.pdb
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\MainWindow.g.cs
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\App.g.cs
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject_MarkupCompile.cache
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject_MarkupCompile.lref
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\MainWindow.baml
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject.g.resources
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject.Properties.Resources.resources
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject.csproj.GenerateResource.Cache
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject.exe
+C:\Users\dat\Documents\Visual Studio 2015\Projects\testdb\testproject\obj\Debug\testproject.pdb
